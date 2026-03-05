@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0E0817;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN WRAPPER */
+.login-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* HEADER */
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.site-title {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.welcome-text {
+  color: #877B9D;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* CARD */
+.login-card {
+  background-color: #170F24;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(116, 48, 232, 0.15);
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* FORM */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  color: #F1F0F5;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  height: 42px;
+  background-color: #2B2239;
+  border: 1px solid #261D35;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #FFFFFF;
+  transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #877B9D;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7430E8;
+  box-shadow: 0 0 8px rgba(116, 48, 232, 0.4);
+}
+
+/* BUTTON */
+.btn-primary {
+  margin-top: 10px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7430E8;
+  color: #FFFFFF;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #763FD8;
+}
+
+/* BOTTOM TEXT */
+.bottom-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #877B9D;
+}
+
+.bottom-text a {
+  color: #E7B008;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.bottom-text a:hover {
+  color: #22C35D;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+  }
+}
