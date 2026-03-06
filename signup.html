@@ -1,52 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | Website Health Monitor</title>
+<title>Anime Animation Cards</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="signup.css">
+<style>
+
+/* BODY BACKGROUND */
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+text-align:center;
+
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#f6d365,#fda085);
+background-size:400% 400%;
+
+animation:bgmove 12s infinite ease;
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* TITLE */
+
+h1{
+margin-top:20px;
+text-shadow:0 0 12px #ff4da6;
+}
+
+/* FLEX CONTAINER */
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:40px;
+}
+
+/* CARD STYLE */
+
+.card{
+
+width:260px;
+border-radius:18px;
+
+background:rgba(255,255,255,0.2);
+
+padding:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+
+transition:all .6s ease;
+
+}
+
+/* CARD HOVER ANIMATION */
+
+.card:hover{
+
+transform:translateY(-15px) rotate(-2deg) scale(1.05);
+
+box-shadow:0 20px 40px rgba(255,0,150,0.7);
+
+}
+
+/* IMAGE */
+
+.card img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+
+}
+
+/* TEXT */
+
+.card h3{
+
+color:#ff0066;
+text-shadow:0 0 10px pink;
+
+}
+
+.card p{
+
+color:#4a0033;
+font-size:14px;
+
+}
+
+/* BOUNCING BALL */
+
+.ball{
+
+width:45px;
+height:45px;
+
+background:linear-gradient(#ff0066,#ffcc00);
+
+border-radius:50%;
+
+margin:60px auto;
+
+animation:bounce 1.2s infinite ease-in-out;
+
+}
+
+@keyframes bounce{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-140px)}
+100%{transform:translateY(0)}
+
+}
+
+/* CORNER BOX */
+
+.cornerBox{
+
+width:90px;
+height:90px;
+
+position:fixed;
+
+border-radius:12px;
+
+animation:moveBox 8s infinite linear;
+
+}
+
+/* CORNER ANIMATION */
+
+@keyframes moveBox{
+
+0%{
+top:0;
+left:0;
+background:#ff0066;
+}
+
+25%{
+top:0;
+left:calc(100% - 90px);
+background:#ff9900;
+transform:rotate(90deg);
+}
+
+50%{
+top:calc(100% - 90px);
+left:calc(100% - 90px);
+background:#ffcc00;
+transform:rotate(180deg);
+}
+
+75%{
+top:calc(100% - 90px);
+left:0;
+background:#cc00ff;
+transform:rotate(270deg);
+}
+
+100%{
+top:0;
+left:0;
+background:#ff0066;
+transform:rotate(360deg);
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <div class="auth-container">
+<h1>Anime Character Cards</h1>
 
-    <div class="auth-card">
-      <h1>Create Account</h1>
-      <p class="subtitle">Start monitoring your websites today</p>
+<div class="container">
 
-      <form action="/signup" method="POST">
+<div class="card">
+<img src="https://wallpaperaccess.com/full/22933.jpg">
+<h3>Naruto Uzumaki</h3>
+<p>Future Hokage of the Hidden Leaf Village.</p>
+</div>
 
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" name="name" placeholder="Enter your name" required>
-        </div>
+<div class="card">
+<img src="https://wallpaperaccess.com/full/1096898.jpg">
+<h3>Monkey D. Luffy</h3>
+<p>Captain of the Straw Hat Pirates.</p>
+</div>
 
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Enter your email" required>
-        </div>
+<div class="card">
+<img src="https://wallpaperaccess.com/full/3811514.jpg">
+<h3>Gojo Satoru</h3>
+<p>The strongest Jujutsu Sorcerer.</p>
+</div>
 
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Create password" required>
-        </div>
+<div class="card">
+<img src="https://wallpaperaccess.com/full/1680230.jpg">
+<h3>Eren Yeager</h3>
+<p>Fighting for freedom in Attack on Titan.</p>
+</div>
 
-        <button type="submit" class="btn-primary">
-          Create Account
-        </button>
+<div class="card">
+<img src="https://wallpaperaccess.com/full/1623418.jpg">
+<h3>Tanjiro Kamado</h3>
+<p>Demon Slayer with strong will.</p>
+</div>
 
-      </form>
+<div class="card">
+<img src="https://wallpaperaccess.com/full/1072368.jpg">
+<h3>Levi Ackerman</h3>
+<p>Humanity's strongest soldier.</p>
+</div>
 
-      <div class="auth-footer">
-        <span>Already have an account?</span>
-        <a href="signin.html">Sign In</a>
-      </div>
+</div>
 
-    </div>
+<h2>Bouncing Ball</h2>
 
-  </div>
+<div class="ball"></div>
+
+<h2>Corner Moving Box</h2>
+
+<div class="cornerBox"></div>
 
 </body>
 </html>
