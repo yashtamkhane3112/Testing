@@ -1,23 +1,14 @@
-document.addEventListener("DOMContentLoaded",()=>{
+// Navbar shadow on scroll
 
-console.log("SiteGuard UI Loaded");
+window.addEventListener("scroll", function(){
 
-const cards=document.querySelectorAll(".feature-card");
+let navbar = document.querySelector(".navbar")
 
-cards.forEach(card=>{
+if(window.scrollY > 50){
+navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)"
+}
+else{
+navbar.style.boxShadow = "none"
+}
 
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-10px) scale(1.02)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="translateY(0) scale(1)";
-
-});
-
-});
-
-});
+})
